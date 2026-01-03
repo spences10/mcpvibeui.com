@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+
+/* Wireframe Theme */
+@theme {
+	--color-background: oklch(99% 0.01 240);
+	--color-foreground: oklch(20% 0.02 240);
+	--color-muted: oklch(96% 0.01 240);
+	--color-muted-foreground: oklch(35% 0.02 240);
+	--color-border: oklch(92% 0.01 240);
+	--color-primary: oklch(55% 0.14 260);
+	--color-primary-foreground: oklch(98% 0.01 260);
+	--color-secondary: oklch(65% 0.14 210);
+	--color-secondary-foreground: oklch(98% 0.01 210);
+	--color-accent: oklch(70% 0.14 180);
+	--color-accent-foreground: oklch(14% 0.02 180);
+	--color-destructive: oklch(60% 0.2 25);
+	--color-destructive-foreground: oklch(98% 0.01 25);
+	--color-info: oklch(72% 0.12 230);
+	--color-success: oklch(66% 0.14 150);
+	--color-warning: oklch(84% 0.16 85);
+	--radius-sm: 0.25rem;
+	--radius-md: 0.25rem;
+	--radius-lg: 0.25rem;
+	--font-display: 'Fira Code', 'SF Mono', Monaco, Consolas, monospace;
+	--font-body:
+		'IBM Plex Mono', 'SF Mono', Monaco, Consolas, monospace;
+	--font-mono: 'SF Mono', Monaco, Consolas, monospace;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+body {
+	font-family: var(--font-body);
+	background-color: var(--color-background);
+	color: var(--color-foreground);
+}
