@@ -1,0 +1,85 @@
+@import 'tailwindcss';
+@import '@fontsource/comfortaa/400.css';
+@import '@fontsource/comfortaa/500.css';
+@import '@fontsource/comfortaa/600.css';
+@import '@fontsource/comfortaa/700.css';
+@import '@fontsource/source-sans-pro/400.css';
+@import '@fontsource/source-sans-pro/600.css';
+@import '@fontsource/source-code-pro/400.css';
+
+/* Organic Flow Theme */
+@theme {
+	--color-background: oklch(98% 0.02 150);
+	--color-foreground: oklch(22% 0.02 150);
+	--color-muted: oklch(95% 0.02 150);
+	--color-muted-foreground: oklch(38% 0.02 150);
+	--color-border: oklch(90% 0.02 150);
+	--color-primary: oklch(68% 0.16 150);
+	--color-primary-foreground: oklch(12% 0.02 150);
+	--color-secondary: oklch(72% 0.14 200);
+	--color-secondary-foreground: oklch(12% 0.02 200);
+	--color-accent: oklch(78% 0.14 100);
+	--color-accent-foreground: oklch(20% 0.03 100);
+	--color-destructive: oklch(62% 0.2 25);
+	--color-destructive-foreground: oklch(98% 0.01 25);
+	--color-info: oklch(70% 0.1 230);
+	--color-success: oklch(66% 0.16 150);
+	--color-warning: oklch(84% 0.16 85);
+	--radius-sm: 1rem;
+	--radius-md: 1rem;
+	--radius-lg: 1.5rem;
+	--font-display:
+		Comfortaa, Quicksand, 'Helvetica Neue', Arial, sans-serif;
+	--font-body:
+		'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	--font-mono:
+		'Source Code Pro', 'SF Mono', Monaco, Consolas, monospace;
+}
+
+/* Animations */
+@keyframes grow {
+	0% {
+		transform: scale(0.9);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes sway {
+	0%,
+	100% {
+		transform: rotate(-1deg);
+	}
+	50% {
+		transform: rotate(1deg);
+	}
+}
+
+@keyframes bloom {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+html {
+	font-family: var(--font-body);
+}
