@@ -1,0 +1,78 @@
+@import 'tailwindcss';
+@import '@fontsource/playfair-display/400.css';
+@import '@fontsource/playfair-display/500.css';
+@import '@fontsource/playfair-display/600.css';
+@import '@fontsource/playfair-display/700.css';
+@import '@fontsource/playfair-display/800.css';
+@import '@fontsource/playfair-display/900.css';
+@import '@fontsource/source-sans-pro/300.css';
+@import '@fontsource/source-sans-pro/400.css';
+@import '@fontsource/source-sans-pro/600.css';
+@import '@fontsource/source-sans-pro/700.css';
+@import '@fontsource/ibm-plex-mono/400.css';
+
+/* Editorial Theme */
+@theme {
+	--color-background: oklch(99% 0.01 240);
+	--color-foreground: oklch(20% 0.03 240);
+	--color-muted: oklch(96% 0.02 240);
+	--color-muted-foreground: oklch(32% 0.02 240);
+	--color-border: oklch(93% 0.02 240);
+	--color-primary: oklch(45% 0.05 250);
+	--color-primary-foreground: oklch(96% 0.01 250);
+	--color-secondary: oklch(55% 0.07 30);
+	--color-secondary-foreground: oklch(98% 0.01 30);
+	--color-accent: oklch(68% 0.09 120);
+	--color-accent-foreground: oklch(14% 0.02 120);
+	--color-destructive: oklch(60% 0.2 25);
+	--color-destructive-foreground: oklch(98% 0.01 25);
+	--color-info: oklch(70% 0.1 230);
+	--color-success: oklch(65% 0.12 150);
+	--color-warning: oklch(82% 0.14 85);
+	--radius-sm: 0.25rem;
+	--radius-md: 0.25rem;
+	--radius-lg: 0.5rem;
+	--font-display: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+	--font-body: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	--font-mono: 'IBM Plex Mono', 'SF Mono', Monaco, Consolas, monospace;
+}
+
+/* Animations */
+@keyframes text-reveal {
+	0% {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes underline-grow {
+	0% {
+		text-decoration-thickness: 1px;
+	}
+	100% {
+		text-decoration-thickness: 2px;
+	}
+}
+
+.animate-reveal {
+	animation: text-reveal 0.8s ease-out forwards;
+}
+
+.animate-reveal-delay-1 {
+	animation: text-reveal 0.8s ease-out 0.1s forwards;
+	opacity: 0;
+}
+
+.animate-reveal-delay-2 {
+	animation: text-reveal 0.8s ease-out 0.2s forwards;
+	opacity: 0;
+}
+
+.animate-reveal-delay-3 {
+	animation: text-reveal 0.8s ease-out 0.3s forwards;
+	opacity: 0;
+}
