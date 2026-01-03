@@ -1,0 +1,67 @@
+@import 'tailwindcss';
+@import '@fontsource/bebas-neue/400.css';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/500.css';
+@import '@fontsource/jetbrains-mono/700.css';
+
+/* Industrial Theme */
+@theme {
+	--color-background: oklch(96% 0.01 240);
+	--color-foreground: oklch(18% 0.02 240);
+	--color-muted: oklch(90% 0.01 240);
+	--color-muted-foreground: oklch(30% 0.02 240);
+	--color-border: oklch(84% 0.01 240);
+	--color-primary: oklch(78% 0.2 85);
+	--color-primary-foreground: oklch(16% 0.02 85);
+	--color-secondary: oklch(45% 0.03 240);
+	--color-secondary-foreground: oklch(96% 0.01 240);
+	--color-accent: oklch(68% 0.2 25);
+	--color-accent-foreground: oklch(98% 0.01 25);
+	--color-destructive: oklch(58% 0.24 25);
+	--color-destructive-foreground: oklch(98% 0.01 25);
+	--color-info: oklch(66% 0.12 230);
+	--color-success: oklch(62% 0.16 150);
+	--color-warning: oklch(82% 0.2 85);
+	--radius-sm: 0.25rem;
+	--radius-md: 0.25rem;
+	--radius-lg: 0.25rem;
+	--font-display: 'Bebas Neue', Impact, 'Arial Black', sans-serif;
+	--font-body: 'JetBrains Mono', 'SF Mono', Monaco, Consolas, monospace;
+	--font-mono: 'JetBrains Mono', 'SF Mono', Monaco, Consolas, monospace;
+}
+
+/* Animations */
+@keyframes heavy-click {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(0.95);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes warning-pulse {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.6;
+	}
+}
+
+@keyframes machinery {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+html {
+	font-family: var(--font-body);
+}
