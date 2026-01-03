@@ -34,8 +34,11 @@
 	--radius-selector: 0.25rem;
 	--radius-field: 0.25rem;
 	--radius-box: 0.5rem;
-	--font-display: Orbitron, Consolas, Monaco, 'Courier New', monospace;
-	--font-body: 'Exo 2', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	--font-display:
+		Orbitron, Consolas, Monaco, 'Courier New', monospace;
+	--font-body:
+		'Exo 2', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		sans-serif;
 }
 
 /* Base styles */

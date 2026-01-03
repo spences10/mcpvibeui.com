@@ -29,9 +29,12 @@
 	--radius-selector: 0.25rem;
 	--radius-field: 0.25rem;
 	--radius-box: 0.25rem;
-	--font-display: 'Open Sans Variable', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	--font-display:
+		'Open Sans Variable', 'Helvetica Neue', Helvetica, Arial,
+		sans-serif;
 	--font-body: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	--font-mono: 'Roboto Mono Variable', 'SF Mono', Monaco, Consolas, monospace;
+	--font-mono:
+		'Roboto Mono Variable', 'SF Mono', Monaco, Consolas, monospace;
 }
 
 body {

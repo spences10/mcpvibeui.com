@@ -25,9 +25,12 @@
 	--radius-selector: 1rem;
 	--radius-field: 1rem;
 	--radius-box: 1.5rem;
-	--font-display: Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	--font-body: Quicksand, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	--font-mono: 'JetBrains Mono', 'SF Mono', Monaco, Consolas, monospace;
+	--font-display:
+		Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	--font-body:
+		Quicksand, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	--font-mono:
+		'JetBrains Mono', 'SF Mono', Monaco, Consolas, monospace;
 }
 
 /* Claymorphic utilities */

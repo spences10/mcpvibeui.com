@@ -10,39 +10,46 @@
 
 /* Editorial Theme */
 @theme {
-  --color-base-100: oklch(99% 0.01 240);
-  --color-base-200: oklch(96% 0.02 240);
-  --color-base-300: oklch(93% 0.02 240);
-  --color-base-content: oklch(20% 0.03 240);
-  --color-primary: oklch(45% 0.05 250);
-  --color-primary-content: oklch(96% 0.01 250);
-  --color-secondary: oklch(55% 0.07 30);
-  --color-secondary-content: oklch(98% 0.01 30);
-  --color-accent: oklch(68% 0.09 120);
-  --color-accent-content: oklch(14% 0.02 120);
-  --color-neutral: oklch(32% 0.02 240);
-  --color-neutral-content: oklch(98% 0.01 240);
-  --color-info: oklch(70% 0.10 230);
-  --color-info-content: oklch(14% 0.02 230);
-  --color-success: oklch(65% 0.12 150);
-  --color-success-content: oklch(98% 0.01 150);
-  --color-warning: oklch(82% 0.14 85);
-  --color-warning-content: oklch(22% 0.04 85);
-  --color-error: oklch(60% 0.20 25);
-  --color-error-content: oklch(98% 0.01 25);
-  --radius-selector: 0.25rem;
-  --radius-field: 0.25rem;
-  --radius-box: 0.5rem;
-  --font-display: "Playfair Display", Georgia, "Times New Roman", Times, serif;
-  --font-body: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--color-base-100: oklch(99% 0.01 240);
+	--color-base-200: oklch(96% 0.02 240);
+	--color-base-300: oklch(93% 0.02 240);
+	--color-base-content: oklch(20% 0.03 240);
+	--color-primary: oklch(45% 0.05 250);
+	--color-primary-content: oklch(96% 0.01 250);
+	--color-secondary: oklch(55% 0.07 30);
+	--color-secondary-content: oklch(98% 0.01 30);
+	--color-accent: oklch(68% 0.09 120);
+	--color-accent-content: oklch(14% 0.02 120);
+	--color-neutral: oklch(32% 0.02 240);
+	--color-neutral-content: oklch(98% 0.01 240);
+	--color-info: oklch(70% 0.1 230);
+	--color-info-content: oklch(14% 0.02 230);
+	--color-success: oklch(65% 0.12 150);
+	--color-success-content: oklch(98% 0.01 150);
+	--color-warning: oklch(82% 0.14 85);
+	--color-warning-content: oklch(22% 0.04 85);
+	--color-error: oklch(60% 0.2 25);
+	--color-error-content: oklch(98% 0.01 25);
+	--radius-selector: 0.25rem;
+	--radius-field: 0.25rem;
+	--radius-box: 0.5rem;
+	--font-display:
+		'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+	--font-body:
+		'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 body {
-  font-family: var(--font-body);
-  background-color: var(--color-base-100);
-  color: var(--color-base-content);
+	font-family: var(--font-body);
+	background-color: var(--color-base-100);
+	color: var(--color-base-content);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-display);
 }
