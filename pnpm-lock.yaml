@@ -35,6 +35,12 @@ importers:
       '@fontsource/lato':
         specifier: ^5.2.7
         version: 5.2.7
+      '@fontsource/noto-sans-jp':
+        specifier: ^5.2.8
+        version: 5.2.8
+      '@fontsource/noto-sans-mono':
+        specifier: ^5.2.10
+        version: 5.2.10
       '@fontsource/open-sans':
         specifier: ^5.2.7
         version: 5.2.7
@@ -54,6 +60,9 @@ importers:
         specifier: ^5.2.8
         version: 5.2.8
       '@fontsource/source-sans-pro':
+        specifier: ^5.2.5
+        version: 5.2.5
+      '@fontsource/source-serif-pro':
         specifier: ^5.2.5
         version: 5.2.5
       '@playwright/test':
@@ -352,6 +361,12 @@ packages:
   '@fontsource/lato@5.2.7':
     resolution: {integrity: sha512-k5mum1ADbDW5cTw1Ett1eQVWeoZ6gq0ct6SFBibEhB4LRxhniChJZTBgd6ph5yBxLkN1fcnsnmicBNA4S/3nbw==}
 
+  '@fontsource/noto-sans-jp@5.2.8':
+    resolution: {integrity: sha512-ngWXPtSV3XH8ZmNX9hnfeQ+x/3mCoaAOA3BVDcyS5jQdh4FYqKjf/S9tEUEYDPwGa2pULJVXTO2+oFg42gWvSw==}
+
+  '@fontsource/noto-sans-mono@5.2.10':
+    resolution: {integrity: sha512-YG3ev3Bc24UGd1x0THgtU3LG1j+sKahhDgo0vTpEfB0wkXD1+tGSq1fJD+QqnYLXjPhMRNe0ZKWoUi1MPH7Qdg==}
+
   '@fontsource/open-sans@5.2.7':
     resolution: {integrity: sha512-8yfgDYjE5O0vmTPdrcjV35y4yMnctsokmi9gN49Gcsr0sjzkMkR97AnKDe6OqZh2SFkYlR28fxOvi21bYEgMSw==}
 
@@ -372,6 +387,9 @@ packages:
 
   '@fontsource/source-sans-pro@5.2.5':
     resolution: {integrity: sha512-ypendqc4pYUc+EgF7qqPY9iVYEz1t/Qr03VojKxG/2g3dnpHa1B6DOlDxWQjQXDj5QrG6inEqGT0g+edjALZyg==}
+
+  '@fontsource/source-serif-pro@5.2.5':
+    resolution: {integrity: sha512-MTsjMrl2+81dar37wV1taDYzU+o9ArcuBVBkXRNb6JuNCBmrKOIAAmI1wC3cE+Q0eAlgXlfNrvZ7swP3l2M8tQ==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -1769,6 +1787,10 @@ snapshots:
 
   '@fontsource/lato@5.2.7': {}
 
+  '@fontsource/noto-sans-jp@5.2.8': {}
+
+  '@fontsource/noto-sans-mono@5.2.10': {}
+
   '@fontsource/open-sans@5.2.7': {}
 
   '@fontsource/orbitron@5.2.8': {}
@@ -1782,6 +1804,8 @@ snapshots:
   '@fontsource/roboto-mono@5.2.8': {}
 
   '@fontsource/source-sans-pro@5.2.5': {}
+
+  '@fontsource/source-serif-pro@5.2.5': {}
 
   '@humanfs/core@0.19.1': {}
 
