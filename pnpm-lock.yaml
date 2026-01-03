@@ -68,6 +68,9 @@ importers:
       '@fontsource/roboto-mono':
         specifier: ^5.2.8
         version: 5.2.8
+      '@fontsource/share-tech-mono':
+        specifier: ^5.2.7
+        version: 5.2.7
       '@fontsource/source-code-pro':
         specifier: ^5.2.7
         version: 5.2.7
@@ -414,6 +417,9 @@ packages:
 
   '@fontsource/roboto-mono@5.2.8':
     resolution: {integrity: sha512-M0XPRcvkOKiTPooXwX7yJSNpuad3CPcQwsADBfnopz3apBs+VKI47pc42mlvAxJjNTRauu5rndSxHc8F52bR7Q==}
+
+  '@fontsource/share-tech-mono@5.2.7':
+    resolution: {integrity: sha512-1JBJ6CU9u5av8aFEUOGOJkq60/IEVVOZDCmiU8X3i0skk0Pp69GngDwlBUHaTZa4G6pbF1UDrC+Fm7XSckW6TQ==}
 
   '@fontsource/source-code-pro@5.2.7':
     resolution: {integrity: sha512-7papq9TH94KT+S5VSY8cU7tFmwuGkIe3qxXRMscuAXH6AjMU+KJI75f28FzgBVDrlMfA0jjlTV4/x5+H5o/5EQ==}
@@ -1850,6 +1856,8 @@ snapshots:
   '@fontsource/quicksand@5.2.10': {}
 
   '@fontsource/roboto-mono@5.2.8': {}
+
+  '@fontsource/share-tech-mono@5.2.7': {}
 
   '@fontsource/source-code-pro@5.2.7': {}
 
