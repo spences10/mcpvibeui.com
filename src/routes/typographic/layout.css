@@ -32,9 +32,12 @@
 	--radius-sm: 0.25rem;
 	--radius-md: 0.25rem;
 	--radius-lg: 0.5rem;
-	--font-display: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
-	--font-body: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	--font-mono: 'IBM Plex Mono', 'SF Mono', Monaco, Consolas, monospace;
+	--font-display:
+		'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+	--font-body:
+		'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	--font-mono:
+		'IBM Plex Mono', 'SF Mono', Monaco, Consolas, monospace;
 }
 
 /* Animations */

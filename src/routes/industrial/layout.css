@@ -26,8 +26,10 @@
 	--radius-md: 0.25rem;
 	--radius-lg: 0.25rem;
 	--font-display: 'Bebas Neue', Impact, 'Arial Black', sans-serif;
-	--font-body: 'JetBrains Mono', 'SF Mono', Monaco, Consolas, monospace;
-	--font-mono: 'JetBrains Mono', 'SF Mono', Monaco, Consolas, monospace;
+	--font-body:
+		'JetBrains Mono', 'SF Mono', Monaco, Consolas, monospace;
+	--font-mono:
+		'JetBrains Mono', 'SF Mono', Monaco, Consolas, monospace;
 }
 
 /* Animations */

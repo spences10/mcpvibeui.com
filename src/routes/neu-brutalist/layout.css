@@ -5,52 +5,75 @@
 
 /* Neu-Brutalist Theme */
 @theme {
-  --color-background: oklch(97% 0.02 250);
-  --color-foreground: oklch(18% 0.03 250);
-  --color-muted: oklch(93% 0.03 250);
-  --color-muted-foreground: oklch(35% 0.03 250);
-  --color-border: oklch(90% 0.04 250);
-  --color-primary: oklch(70% 0.24 30);
-  --color-primary-foreground: oklch(99% 0.01 30);
-  --color-secondary: oklch(72% 0.23 320);
-  --color-secondary-foreground: oklch(99% 0.01 320);
-  --color-accent: oklch(78% 0.23 110);
-  --color-accent-foreground: oklch(10% 0.02 110);
-  --color-destructive: oklch(60% 0.3 30);
-  --color-destructive-foreground: oklch(98% 0.01 30);
-  --color-info: oklch(70% 0.2 220);
-  --color-success: oklch(65% 0.25 140);
-  --color-warning: oklch(85% 0.25 95);
-  --radius-sm: 0rem;
-  --radius-md: 0rem;
-  --radius-lg: 0.25rem;
-  --font-display: "Space Grotesk", "Arial Black", Arial, sans-serif;
-  --font-body: "Space Grotesk", "SF Mono", Monaco, Consolas, monospace;
-  --font-mono: "Space Mono", "SF Mono", Monaco, Consolas, monospace;
+	--color-background: oklch(97% 0.02 250);
+	--color-foreground: oklch(18% 0.03 250);
+	--color-muted: oklch(93% 0.03 250);
+	--color-muted-foreground: oklch(35% 0.03 250);
+	--color-border: oklch(90% 0.04 250);
+	--color-primary: oklch(70% 0.24 30);
+	--color-primary-foreground: oklch(99% 0.01 30);
+	--color-secondary: oklch(72% 0.23 320);
+	--color-secondary-foreground: oklch(99% 0.01 320);
+	--color-accent: oklch(78% 0.23 110);
+	--color-accent-foreground: oklch(10% 0.02 110);
+	--color-destructive: oklch(60% 0.3 30);
+	--color-destructive-foreground: oklch(98% 0.01 30);
+	--color-info: oklch(70% 0.2 220);
+	--color-success: oklch(65% 0.25 140);
+	--color-warning: oklch(85% 0.25 95);
+	--radius-sm: 0rem;
+	--radius-md: 0rem;
+	--radius-lg: 0.25rem;
+	--font-display: 'Space Grotesk', 'Arial Black', Arial, sans-serif;
+	--font-body:
+		'Space Grotesk', 'SF Mono', Monaco, Consolas, monospace;
+	--font-mono: 'Space Mono', 'SF Mono', Monaco, Consolas, monospace;
 }
 
 /* Animations */
 @keyframes glitch {
-  0%, 100% { transform: translate(0); }
-  20% { transform: translate(-2px, 2px); }
-  40% { transform: translate(2px, -2px); }
-  60% { transform: translate(-1px, -1px); }
-  80% { transform: translate(1px, 1px); }
+	0%,
+	100% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translate(-2px, 2px);
+	}
+	40% {
+		transform: translate(2px, -2px);
+	}
+	60% {
+		transform: translate(-1px, -1px);
+	}
+	80% {
+		transform: translate(1px, 1px);
+	}
 }
 
 @keyframes brutal-bounce {
-  0% { transform: scale(0.9) rotate(-2deg); }
-  50% { transform: scale(1.05) rotate(1deg); }
-  100% { transform: scale(1) rotate(0); }
+	0% {
+		transform: scale(0.9) rotate(-2deg);
+	}
+	50% {
+		transform: scale(1.05) rotate(1deg);
+	}
+	100% {
+		transform: scale(1) rotate(0);
+	}
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0) rotate(-1deg); }
-  50% { transform: translateY(-10px) rotate(1deg); }
+	0%,
+	100% {
+		transform: translateY(0) rotate(-1deg);
+	}
+	50% {
+		transform: translateY(-10px) rotate(1deg);
+	}
 }
 
 body {
-  font-family: var(--font-body);
-  background-color: var(--color-background);
-  color: var(--color-foreground);
+	font-family: var(--font-body);
+	background-color: var(--color-background);
+	color: var(--color-foreground);
 }
