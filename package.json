@@ -19,6 +19,8 @@
 	"devDependencies": {
 		"@eslint/compat": "^1.4.0",
 		"@eslint/js": "^9.39.1",
+		"@fontsource-variable/open-sans": "^5.2.7",
+		"@fontsource-variable/roboto-mono": "^5.2.8",
 		"@fontsource/exo-2": "^5.2.8",
 		"@fontsource/ibm-plex-mono": "^5.2.7",
 		"@fontsource/lato": "^5.2.7",

@@ -14,6 +14,12 @@ importers:
       '@eslint/js':
         specifier: ^9.39.1
         version: 9.39.2
+      '@fontsource-variable/open-sans':
+        specifier: ^5.2.7
+        version: 5.2.7
+      '@fontsource-variable/roboto-mono':
+        specifier: ^5.2.8
+        version: 5.2.8
       '@fontsource/exo-2':
         specifier: ^5.2.8
         version: 5.2.8
@@ -318,6 +324,12 @@ packages:
   '@eslint/plugin-kit@0.4.1':
     resolution: {integrity: sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@fontsource-variable/open-sans@5.2.7':
+    resolution: {integrity: sha512-wzCLm2STuekK9Fz58DiuBnk4GgJpvvVtAU85a4b06ACNG/UsVjQcCvkUd6R/ETlHfsaykCUZamLRvSXg4KtWuA==}
+
+  '@fontsource-variable/roboto-mono@5.2.8':
+    resolution: {integrity: sha512-6M2U3wGIUxYNKRrUoKls8BRRIPDA57T8J0agqwyDkiEHrLEEAqptsxcUl3eTm6tnRNEn6yEm4pCefvtnujebDA==}
 
   '@fontsource/exo-2@5.2.8':
     resolution: {integrity: sha512-cOZuiqW+gKg2SJAjymCicup0A8qto4M/lpyGahal3twMeLCRma8x/okFCdLYlTvYeQesF7d3WLKi+N04iPb40A==}
@@ -1730,6 +1742,10 @@ snapshots:
     dependencies:
       '@eslint/core': 0.17.0
       levn: 0.4.1
+
+  '@fontsource-variable/open-sans@5.2.7': {}
+
+  '@fontsource-variable/roboto-mono@5.2.8': {}
 
   '@fontsource/exo-2@5.2.8': {}
 

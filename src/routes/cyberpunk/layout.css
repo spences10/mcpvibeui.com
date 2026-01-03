@@ -1,0 +1,108 @@
+@import 'tailwindcss';
+
+/* Cyberpunk Fonts */
+@import '@fontsource/orbitron/400.css';
+@import '@fontsource/orbitron/700.css';
+@import '@fontsource/orbitron/900.css';
+@import '@fontsource/exo-2/300.css';
+@import '@fontsource/exo-2/400.css';
+@import '@fontsource/exo-2/500.css';
+@import '@fontsource/exo-2/600.css';
+
+/* Cyberpunk Theme */
+@theme {
+	--color-base-100: oklch(12% 0.03 300);
+	--color-base-200: oklch(16% 0.03 300);
+	--color-base-300: oklch(22% 0.03 300);
+	--color-base-content: oklch(95% 0.02 300);
+	--color-primary: oklch(65% 0.28 330);
+	--color-primary-content: oklch(98% 0.01 330);
+	--color-secondary: oklch(72% 0.28 260);
+	--color-secondary-content: oklch(98% 0.01 260);
+	--color-accent: oklch(72% 0.28 190);
+	--color-accent-content: oklch(10% 0.02 190);
+	--color-neutral: oklch(30% 0.03 300);
+	--color-neutral-content: oklch(95% 0.02 300);
+	--color-info: oklch(70% 0.2 230);
+	--color-info-content: oklch(98% 0.01 230);
+	--color-success: oklch(65% 0.24 145);
+	--color-success-content: oklch(98% 0.01 145);
+	--color-warning: oklch(80% 0.25 85);
+	--color-warning-content: oklch(20% 0.05 85);
+	--color-error: oklch(62% 0.3 25);
+	--color-error-content: oklch(98% 0.01 25);
+	--radius-selector: 0.25rem;
+	--radius-field: 0.25rem;
+	--radius-box: 0.5rem;
+	--font-display: Orbitron, Consolas, Monaco, 'Courier New', monospace;
+	--font-body: 'Exo 2', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Base styles */
+body {
+	font-family: var(--font-body);
+	background-color: var(--color-base-100);
+	color: var(--color-base-content);
+}
+
+/* Neon glow utilities */
+.glow-primary {
+	box-shadow:
+		0 0 20px var(--color-primary),
+		0 0 40px var(--color-primary);
+}
+
+.glow-secondary {
+	box-shadow:
+		0 0 20px var(--color-secondary),
+		0 0 40px var(--color-secondary);
+}
+
+.glow-accent {
+	box-shadow:
+		0 0 20px var(--color-accent),
+		0 0 40px var(--color-accent);
+}
+
+.text-glow-primary {
+	text-shadow:
+		0 0 10px var(--color-primary),
+		0 0 20px var(--color-primary);
+}
+
+.text-glow-secondary {
+	text-shadow:
+		0 0 10px var(--color-secondary),
+		0 0 20px var(--color-secondary);
+}
+
+.text-glow-accent {
+	text-shadow:
+		0 0 10px var(--color-accent),
+		0 0 20px var(--color-accent);
+}
+
+/* Animated background grid */
+.cyber-grid {
+	background-image:
+		linear-gradient(var(--color-primary) 1px, transparent 1px),
+		linear-gradient(90deg, var(--color-primary) 1px, transparent 1px);
+	background-size: 50px 50px;
+	background-position: center;
+	opacity: 0.1;
+}
+
+/* Scanline effect */
+.scanlines::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: repeating-linear-gradient(
+		0deg,
+		transparent,
+		transparent 2px,
+		rgba(0, 0, 0, 0.1) 2px,
+		rgba(0, 0, 0, 0.1) 4px
+	);
+	pointer-events: none;
+}
