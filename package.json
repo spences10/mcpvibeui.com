@@ -37,6 +37,8 @@
 		"@fontsource/roboto-mono": "^5.2.8",
 		"@fontsource/source-sans-pro": "^5.2.5",
 		"@fontsource/source-serif-pro": "^5.2.5",
+		"@fontsource/space-grotesk": "^5.2.10",
+		"@fontsource/space-mono": "^5.2.9",
 		"@playwright/test": "^1.57.0",
 		"@sveltejs/adapter-auto": "^7.0.0",
 		"@sveltejs/kit": "^2.49.1",
