@@ -48,16 +48,29 @@
 		{ name: 'Wireframe', slug: 'wireframe', img: wireframe },
 	];
 
-	let current_index = $state(0);
-	let is_paused = $state(false);
+	let current_index = $state(
+		Math.floor(Math.random() * themes.length),
+	);
+	let is_transitioning = $state(false);
 
-	$effect(() => {
-		if (is_paused) return;
-		const interval = setInterval(() => {
+	// Generate theme class name
+	const get_theme_class = (slug: string) => `theme-${slug}`;
+
+	// Switch theme with opacity fade for smoother font transitions
+	const switch_theme = () => {
+		if (is_transitioning) return;
+		is_transitioning = true;
+		// Wait for fade out, then switch theme
+		setTimeout(() => {
 			current_index = (current_index + 1) % themes.length;
-		}, 5000);
-		return () => clearInterval(interval);
-	});
+			// Wait a frame for theme to apply, then fade back in
+			requestAnimationFrame(() => {
+				setTimeout(() => {
+					is_transitioning = false;
+				}, 50);
+			});
+		}, 300);
+	};
 
 	const seo_config: SeoConfig = {
 		title:
@@ -84,13 +97,16 @@
 <SchemaOrg schema={schema_org} />
 
 <div
-	class="min-h-screen"
+	class="min-h-screen {get_theme_class(
+		themes[current_index].slug,
+	)} transition-opacity duration-300 ease-in-out"
+	class:opacity-0={is_transitioning}
 	style="background-color: var(--color-background); color: var(--color-foreground); font-family: var(--font-body);"
 >
 	<!-- Nav -->
 	<nav
-		class="fixed top-0 right-0 left-0 z-50 backdrop-blur-md"
-		style="background-color: oklch(99% 0.01 240 / 0.8); border-bottom: 1px solid var(--color-border);"
+		class="fixed top-0 right-0 left-0 z-50 backdrop-blur-md transition-colors duration-500"
+		style="background-color: color-mix(in oklch, var(--color-background) 80%, transparent); border-bottom: 1px solid var(--color-border);"
 	>
 		<div
 			class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4"
@@ -119,8 +135,7 @@
 					href="https://www.npmjs.com/package/mcp-vibe-ui"
 					target="_blank"
 					rel="noopener"
-					class="px-4 py-2 text-sm font-medium transition hover:opacity-90"
-					style="background-color: var(--color-foreground); color: var(--color-background); border-radius: var(--radius-sm);"
+					class="btn-primary px-4 py-2 text-sm font-medium transition-all"
 				>
 					npm
 				</a>
@@ -169,11 +184,11 @@
 					<!-- Quick install -->
 					<div
 						class="mb-6 overflow-hidden"
-						style="border: 1px solid var(--color-border); border-radius: var(--radius-md); background-color: var(--color-muted);"
+						style="border: var(--theme-border-width, 1px) solid var(--color-border); border-radius: var(--radius-md); background-color: var(--color-muted); box-shadow: var(--theme-shadow);"
 					>
 						<div
 							class="px-3 py-1.5 text-xs"
-							style="border-bottom: 1px solid var(--color-border); color: var(--color-muted-foreground);"
+							style="border-bottom: var(--theme-border-width, 1px) solid var(--color-border); color: var(--color-muted-foreground);"
 						>
 							Add to Claude Desktop / Cursor
 						</div>
@@ -187,8 +202,7 @@
 					<div class="flex flex-wrap gap-3">
 						<a
 							href="#how-it-works"
-							class="px-6 py-3 text-sm font-semibold transition hover:opacity-90"
-							style="background-color: var(--color-foreground); color: var(--color-background); border-radius: var(--radius-sm);"
+							class="btn-primary px-6 py-3 text-sm font-semibold transition-all"
 						>
 							See how it works
 						</a>
@@ -196,8 +210,7 @@
 							href="https://github.com/spences10/mcp-vibe-ui"
 							target="_blank"
 							rel="noopener"
-							class="px-6 py-3 text-sm font-semibold transition hover:opacity-80"
-							style="border: 1px solid var(--color-border); border-radius: var(--radius-sm);"
+							class="btn-secondary px-6 py-3 text-sm font-semibold transition-all"
 						>
 							GitHub
 						</a>
@@ -217,12 +230,12 @@
 
 					<div
 						class="relative overflow-hidden"
-						style="border-radius: var(--radius-lg); border: 1px solid var(--color-border); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);"
+						style="border-radius: var(--radius-lg); border: var(--theme-border-width, 1px) solid var(--color-border); box-shadow: var(--theme-shadow, 0 25px 50px -12px rgba(0,0,0,0.15));"
 					>
 						<!-- Browser chrome -->
 						<div
 							class="flex items-center gap-2 px-4 py-3"
-							style="background-color: var(--color-muted); border-bottom: 1px solid var(--color-border);"
+							style="background-color: var(--color-muted); border-bottom: var(--theme-border-width, 1px) solid var(--color-border);"
 						>
 							<div class="flex gap-1.5">
 								<div
@@ -239,8 +252,8 @@
 								></div>
 							</div>
 							<div
-								class="ml-4 flex-1 rounded px-3 py-1 text-xs"
-								style="background-color: var(--color-background); color: var(--color-muted-foreground); font-family: var(--font-mono);"
+								class="ml-4 flex-1 px-3 py-1 text-xs"
+								style="background-color: var(--color-background); color: var(--color-muted-foreground); font-family: var(--font-mono); border-radius: var(--radius-sm);"
 							>
 								localhost:5173
 							</div>
@@ -250,10 +263,7 @@
 						<button
 							type="button"
 							class="relative block aspect-video w-full cursor-pointer"
-							onmouseenter={() => (is_paused = true)}
-							onmouseleave={() => (is_paused = false)}
-							onclick={() =>
-								(current_index = (current_index + 1) % themes.length)}
+							onclick={switch_theme}
 						>
 							{#key current_index}
 								<img
@@ -267,8 +277,8 @@
 
 						<!-- Theme name overlay -->
 						<div
-							class="absolute right-4 bottom-4 left-4 flex items-center justify-between rounded px-4 py-2 backdrop-blur-md"
-							style="background-color: oklch(0% 0 0 / 0.7);"
+							class="absolute right-4 bottom-4 left-4 flex items-center justify-between px-4 py-2 backdrop-blur-md"
+							style="background-color: oklch(0% 0 0 / 0.7); border-radius: var(--radius-sm);"
 						>
 							{#key current_index}
 								<span
@@ -290,8 +300,8 @@
 
 					<!-- Prompt badge -->
 					<div
-						class="mt-4 rounded p-4"
-						style="background-color: var(--color-muted); border: 1px solid var(--color-border); border-radius: var(--radius-lg);"
+						class="mt-4 p-4"
+						style="background-color: var(--color-muted); border: var(--theme-border-width, 1px) solid var(--color-border); border-radius: var(--radius-lg);"
 					>
 						<div class="flex items-center justify-between">
 							<p
@@ -301,8 +311,8 @@
 								The exact prompt used
 							</p>
 							<span
-								class="rounded px-2 py-0.5 text-xs"
-								style="background-color: var(--color-primary); color: var(--color-primary-foreground);"
+								class="px-2 py-0.5 text-xs"
+								style="background-color: var(--color-primary); color: var(--color-primary-foreground); border-radius: var(--radius-sm);"
 								>one-shot</span
 							>
 						</div>
@@ -361,7 +371,7 @@
 					<a
 						href="/{theme.slug}"
 						class="group relative overflow-hidden transition hover:opacity-95"
-						style="border-radius: var(--radius-lg); border: 1px solid var(--color-border);"
+						style="border-radius: var(--radius-lg); border: var(--theme-border-width, 1px) solid var(--color-border); box-shadow: var(--theme-shadow);"
 					>
 						<div class="aspect-video">
 							<img
@@ -419,12 +429,12 @@
 				<!-- Steps -->
 				<div class="space-y-6">
 					<div
-						class="flex gap-4 rounded-lg p-4"
-						style="background-color: var(--color-background); border: 1px solid var(--color-border);"
+						class="flex gap-4 p-4"
+						style="background-color: var(--color-background); border: var(--theme-border-width, 1px) solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--theme-shadow);"
 					>
 						<div
-							class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-semibold"
-							style="background-color: var(--color-foreground); color: var(--color-background);"
+							class="flex h-8 w-8 shrink-0 items-center justify-center text-sm font-semibold"
+							style="background-color: var(--color-foreground); color: var(--color-background); border-radius: var(--radius-sm);"
 						>
 							1
 						</div>
@@ -446,12 +456,12 @@
 					</div>
 
 					<div
-						class="flex gap-4 rounded-lg p-4"
-						style="background-color: var(--color-background); border: 1px solid var(--color-border);"
+						class="flex gap-4 p-4"
+						style="background-color: var(--color-background); border: var(--theme-border-width, 1px) solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--theme-shadow);"
 					>
 						<div
-							class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-semibold"
-							style="background-color: var(--color-foreground); color: var(--color-background);"
+							class="flex h-8 w-8 shrink-0 items-center justify-center text-sm font-semibold"
+							style="background-color: var(--color-foreground); color: var(--color-background); border-radius: var(--radius-sm);"
 						>
 							2
 						</div>
@@ -473,12 +483,12 @@
 					</div>
 
 					<div
-						class="flex gap-4 rounded-lg p-4"
-						style="background-color: var(--color-background); border: 1px solid var(--color-border);"
+						class="flex gap-4 p-4"
+						style="background-color: var(--color-background); border: var(--theme-border-width, 1px) solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--theme-shadow);"
 					>
 						<div
-							class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-semibold"
-							style="background-color: var(--color-foreground); color: var(--color-background);"
+							class="flex h-8 w-8 shrink-0 items-center justify-center text-sm font-semibold"
+							style="background-color: var(--color-foreground); color: var(--color-background); border-radius: var(--radius-sm);"
 						>
 							3
 						</div>
@@ -503,11 +513,11 @@
 				<!-- Code example -->
 				<div
 					class="overflow-hidden"
-					style="border: 1px solid var(--color-border); border-radius: var(--radius-lg); background-color: var(--color-background);"
+					style="border: var(--theme-border-width, 1px) solid var(--color-border); border-radius: var(--radius-lg); background-color: var(--color-background); box-shadow: var(--theme-shadow);"
 				>
 					<div
 						class="px-4 py-2"
-						style="border-bottom: 1px solid var(--color-border);"
+						style="border-bottom: var(--theme-border-width, 1px) solid var(--color-border);"
 					>
 						<span
 							class="text-xs"
@@ -553,11 +563,11 @@
 				</h3>
 				<div
 					class="mx-auto max-w-2xl overflow-hidden"
-					style="border: 1px solid var(--color-border); border-radius: var(--radius-lg); background-color: var(--color-background);"
+					style="border: var(--theme-border-width, 1px) solid var(--color-border); border-radius: var(--radius-lg); background-color: var(--color-background); box-shadow: var(--theme-shadow);"
 				>
 					<div
 						class="px-4 py-2"
-						style="border-bottom: 1px solid var(--color-border);"
+						style="border-bottom: var(--theme-border-width, 1px) solid var(--color-border);"
 					>
 						<span
 							class="text-xs"
@@ -603,8 +613,8 @@
 			</h2>
 			<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
 				<div
-					class="rounded p-6"
-					style="background-color: var(--color-background); border: 1px solid var(--color-border); border-radius: var(--radius-lg);"
+					class="p-6"
+					style="background-color: var(--color-background); border: var(--theme-border-width, 1px) solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--theme-shadow);"
 				>
 					<div class="mb-3 text-2xl">🎨</div>
 					<h3
@@ -622,8 +632,8 @@
 					</p>
 				</div>
 				<div
-					class="rounded p-6"
-					style="background-color: var(--color-background); border: 1px solid var(--color-border); border-radius: var(--radius-lg);"
+					class="p-6"
+					style="background-color: var(--color-background); border: var(--theme-border-width, 1px) solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--theme-shadow);"
 				>
 					<div class="mb-3 text-2xl">✏️</div>
 					<h3
@@ -641,8 +651,8 @@
 					</p>
 				</div>
 				<div
-					class="rounded p-6"
-					style="background-color: var(--color-background); border: 1px solid var(--color-border); border-radius: var(--radius-lg);"
+					class="p-6"
+					style="background-color: var(--color-background); border: var(--theme-border-width, 1px) solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--theme-shadow);"
 				>
 					<div class="mb-3 text-2xl">🧩</div>
 					<h3
@@ -660,8 +670,8 @@
 					</p>
 				</div>
 				<div
-					class="rounded p-6"
-					style="background-color: var(--color-background); border: 1px solid var(--color-border); border-radius: var(--radius-lg);"
+					class="p-6"
+					style="background-color: var(--color-background); border: var(--theme-border-width, 1px) solid var(--color-border); border-radius: var(--radius-lg); box-shadow: var(--theme-shadow);"
 				>
 					<div class="mb-3 text-2xl">✨</div>
 					<h3
@@ -685,7 +695,7 @@
 	<!-- Footer -->
 	<footer
 		class="px-6 py-12"
-		style="border-top: 1px solid var(--color-border);"
+		style="border-top: var(--theme-border-width, 1px) solid var(--color-border);"
 	>
 		<div
 			class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 md:flex-row"

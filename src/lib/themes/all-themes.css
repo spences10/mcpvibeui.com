@@ -1,0 +1,1015 @@
+/* All Themes - Class-based switching */
+/* Usage: Add class like "theme-cyberpunk" to root element */
+
+/* Register custom properties for animation */
+@property --color-background {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: oklch(98% 0.01 240);
+}
+
+@property --color-foreground {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: oklch(20% 0.02 240);
+}
+
+@property --color-muted {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: oklch(96% 0.01 240);
+}
+
+@property --color-muted-foreground {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: oklch(35% 0.02 240);
+}
+
+@property --color-border {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: oklch(92% 0.01 240);
+}
+
+@property --color-primary {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: oklch(55% 0.14 260);
+}
+
+@property --color-primary-foreground {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: oklch(98% 0.01 260);
+}
+
+/* ============================================
+   CYBERPUNK
+   ============================================ */
+.theme-cyberpunk {
+	--color-background: oklch(12% 0.03 300);
+	--color-foreground: oklch(95% 0.02 300);
+	--color-muted: oklch(16% 0.03 300);
+	--color-muted-foreground: oklch(70% 0.02 300);
+	--color-border: oklch(22% 0.03 300);
+	--color-primary: oklch(65% 0.28 330);
+	--color-primary-foreground: oklch(98% 0.01 330);
+	--color-secondary: oklch(72% 0.28 260);
+	--color-secondary-foreground: oklch(98% 0.01 260);
+	--color-accent: oklch(72% 0.28 190);
+	--color-accent-foreground: oklch(10% 0.02 190);
+	--radius-sm: 0.25rem;
+	--radius-md: 0.25rem;
+	--radius-lg: 0.5rem;
+	--font-display: 'Orbitron', Consolas, Monaco, monospace;
+	--font-body: 'Exo 2', -apple-system, BlinkMacSystemFont, sans-serif;
+	--font-mono: 'Fira Code', 'SF Mono', Monaco, monospace;
+	--theme-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+	--theme-glow: 0 0 20px var(--color-primary);
+}
+
+/* ============================================
+   GLASSMORPHIC
+   ============================================ */
+.theme-glassmorphic {
+	--color-background: oklch(98% 0.02 240);
+	--color-foreground: oklch(22% 0.03 240);
+	--color-muted: oklch(96% 0.02 240);
+	--color-muted-foreground: oklch(45% 0.03 240);
+	--color-border: oklch(92% 0.02 240);
+	--color-primary: oklch(72% 0.14 250);
+	--color-primary-foreground: oklch(12% 0.02 250);
+	--color-secondary: oklch(76% 0.12 180);
+	--color-secondary-foreground: oklch(12% 0.02 180);
+	--color-accent: oklch(84% 0.12 90);
+	--color-accent-foreground: oklch(20% 0.03 90);
+	--radius-sm: 0.75rem;
+	--radius-md: 1rem;
+	--radius-lg: 1rem;
+	--font-display: Inter, system-ui, sans-serif;
+	--font-body: system-ui, -apple-system, sans-serif;
+	--font-mono: 'Fira Code', 'SF Mono', Monaco, monospace;
+	--theme-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+	--theme-blur: blur(16px);
+}
+
+/* ============================================
+   NEUMORPHIC
+   ============================================ */
+.theme-neumorphic {
+	--color-background: oklch(98% 0.01 240);
+	--color-foreground: oklch(22% 0.02 240);
+	--color-muted: oklch(95% 0.01 240);
+	--color-muted-foreground: oklch(40% 0.01 240);
+	--color-border: oklch(90% 0.01 240);
+	--color-primary: oklch(70% 0.06 210);
+	--color-primary-foreground: oklch(14% 0.02 210);
+	--color-secondary: oklch(76% 0.06 150);
+	--color-secondary-foreground: oklch(14% 0.02 150);
+	--color-accent: oklch(84% 0.06 90);
+	--color-accent-foreground: oklch(16% 0.02 90);
+	--radius-sm: 1rem;
+	--radius-md: 1rem;
+	--radius-lg: 1.5rem;
+	--font-display: Inter, 'SF Pro Display', system-ui, sans-serif;
+	--font-body: Inter, 'SF Pro Text', system-ui, sans-serif;
+	--font-mono: 'SF Mono', Monaco, Consolas, monospace;
+	--theme-shadow:
+		8px 8px 16px rgba(0, 0, 0, 0.1),
+		-8px -8px 16px rgba(255, 255, 255, 0.8);
+	--theme-shadow-inset:
+		inset 4px 4px 8px rgba(0, 0, 0, 0.1),
+		inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+}
+
+/* ============================================
+   NEU-BRUTALIST
+   ============================================ */
+.theme-neu-brutalist {
+	--color-background: oklch(97% 0.02 250);
+	--color-foreground: oklch(18% 0.03 250);
+	--color-muted: oklch(93% 0.03 250);
+	--color-muted-foreground: oklch(35% 0.03 250);
+	--color-border: oklch(90% 0.04 250);
+	--color-primary: oklch(70% 0.24 30);
+	--color-primary-foreground: oklch(99% 0.01 30);
+	--color-secondary: oklch(72% 0.23 320);
+	--color-secondary-foreground: oklch(99% 0.01 320);
+	--color-accent: oklch(78% 0.23 110);
+	--color-accent-foreground: oklch(10% 0.02 110);
+	--radius-sm: 0rem;
+	--radius-md: 0rem;
+	--radius-lg: 0.25rem;
+	--font-display: 'Arial Black', Arial, Helvetica, sans-serif;
+	--font-body: 'Space Grotesk', 'SF Mono', Monaco, monospace;
+	--font-mono: 'Space Mono', 'SF Mono', Monaco, monospace;
+	--theme-shadow: 8px 8px 0 0 #000;
+	--theme-border-width: 4px;
+}
+
+/* ============================================
+   CLAYMORPHIC
+   ============================================ */
+.theme-claymorphic {
+	--color-background: oklch(98% 0.02 210);
+	--color-foreground: oklch(22% 0.03 210);
+	--color-muted: oklch(95% 0.03 210);
+	--color-muted-foreground: oklch(40% 0.02 210);
+	--color-border: oklch(92% 0.03 210);
+	--color-primary: oklch(78% 0.09 250);
+	--color-primary-foreground: oklch(18% 0.02 250);
+	--color-secondary: oklch(85% 0.1 145);
+	--color-secondary-foreground: oklch(20% 0.02 145);
+	--color-accent: oklch(88% 0.1 70);
+	--color-accent-foreground: oklch(22% 0.03 70);
+	--radius-sm: 1rem;
+	--radius-md: 1rem;
+	--radius-lg: 1.5rem;
+	--font-display: Poppins, 'Helvetica Neue', Arial, sans-serif;
+	--font-body: Quicksand, 'Helvetica Neue', Arial, sans-serif;
+	--font-mono: 'JetBrains Mono', 'SF Mono', Monaco, monospace;
+	--theme-shadow:
+		0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* ============================================
+   EDITORIAL
+   ============================================ */
+.theme-editorial {
+	--color-background: oklch(99% 0.01 240);
+	--color-foreground: oklch(20% 0.03 240);
+	--color-muted: oklch(96% 0.02 240);
+	--color-muted-foreground: oklch(32% 0.02 240);
+	--color-border: oklch(93% 0.02 240);
+	--color-primary: oklch(45% 0.05 250);
+	--color-primary-foreground: oklch(96% 0.01 250);
+	--color-secondary: oklch(55% 0.07 30);
+	--color-secondary-foreground: oklch(98% 0.01 30);
+	--color-accent: oklch(68% 0.09 120);
+	--color-accent-foreground: oklch(14% 0.02 120);
+	--radius-sm: 0.25rem;
+	--radius-md: 0.25rem;
+	--radius-lg: 0.5rem;
+	--font-display:
+		'Playfair Display', Georgia, 'Times New Roman', serif;
+	--font-body: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+	--font-mono: 'IBM Plex Mono', 'SF Mono', Monaco, monospace;
+	--theme-shadow: none;
+}
+
+/* ============================================
+   FLAT
+   ============================================ */
+.theme-flat {
+	--color-background: oklch(98% 0.02 240);
+	--color-foreground: oklch(20% 0.03 240);
+	--color-muted: oklch(94% 0.02 240);
+	--color-muted-foreground: oklch(40% 0.02 240);
+	--color-border: oklch(90% 0.02 240);
+	--color-primary: oklch(62% 0.18 260);
+	--color-primary-foreground: oklch(98% 0.01 260);
+	--color-secondary: oklch(58% 0.16 25);
+	--color-secondary-foreground: oklch(98% 0.01 25);
+	--color-accent: oklch(64% 0.16 150);
+	--color-accent-foreground: oklch(14% 0.02 150);
+	--radius-sm: 0.25rem;
+	--radius-md: 0.25rem;
+	--radius-lg: 0.25rem;
+	--font-display: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+	--font-body: Lato, 'Helvetica Neue', Arial, sans-serif;
+	--font-mono: 'Roboto Mono', 'SF Mono', Monaco, monospace;
+	--theme-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   INDUSTRIAL
+   ============================================ */
+.theme-industrial {
+	--color-background: oklch(96% 0.01 240);
+	--color-foreground: oklch(18% 0.02 240);
+	--color-muted: oklch(90% 0.01 240);
+	--color-muted-foreground: oklch(30% 0.02 240);
+	--color-border: oklch(84% 0.01 240);
+	--color-primary: oklch(78% 0.2 85);
+	--color-primary-foreground: oklch(16% 0.02 85);
+	--color-secondary: oklch(45% 0.03 240);
+	--color-secondary-foreground: oklch(96% 0.01 240);
+	--color-accent: oklch(68% 0.2 25);
+	--color-accent-foreground: oklch(98% 0.01 25);
+	--radius-sm: 0.25rem;
+	--radius-md: 0.25rem;
+	--radius-lg: 0.25rem;
+	--font-display: 'Bebas Neue', Impact, 'Arial Black', sans-serif;
+	--font-body: 'JetBrains Mono', 'SF Mono', Monaco, monospace;
+	--font-mono: 'JetBrains Mono', 'SF Mono', Monaco, monospace;
+	--theme-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+	--theme-border-width: 2px;
+}
+
+/* ============================================
+   JAPANESE MINIMALIST
+   ============================================ */
+.theme-japanese-minimalist {
+	--color-background: oklch(99% 0.01 240);
+	--color-foreground: oklch(18% 0.02 240);
+	--color-muted: oklch(96% 0.01 240);
+	--color-muted-foreground: oklch(35% 0.02 240);
+	--color-border: oklch(92% 0.01 240);
+	--color-primary: oklch(55% 0.06 20);
+	--color-primary-foreground: oklch(98% 0.01 20);
+	--color-secondary: oklch(60% 0.06 170);
+	--color-secondary-foreground: oklch(98% 0.01 170);
+	--color-accent: oklch(70% 0.08 80);
+	--color-accent-foreground: oklch(18% 0.02 80);
+	--radius-sm: 0.25rem;
+	--radius-md: 0.25rem;
+	--radius-lg: 0.5rem;
+	--font-display: 'Noto Sans JP', 'Hiragino Sans', Meiryo, sans-serif;
+	--font-body: 'Source Serif Pro', Georgia, 'Times New Roman', serif;
+	--font-mono: 'Noto Sans Mono', 'SF Mono', Monaco, monospace;
+	--theme-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* ============================================
+   MONOCHROME
+   ============================================ */
+.theme-monochrome {
+	--color-background: oklch(98% 0 240);
+	--color-foreground: oklch(18% 0 240);
+	--color-muted: oklch(94% 0 240);
+	--color-muted-foreground: oklch(30% 0 240);
+	--color-border: oklch(90% 0 240);
+	--color-primary: oklch(40% 0 240);
+	--color-primary-foreground: oklch(98% 0 240);
+	--color-secondary: oklch(60% 0 240);
+	--color-secondary-foreground: oklch(10% 0 240);
+	--color-accent: oklch(70% 0 240);
+	--color-accent-foreground: oklch(14% 0 240);
+	--radius-sm: 0.25rem;
+	--radius-md: 0.25rem;
+	--radius-lg: 0.25rem;
+	--font-display: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	--font-body: Inter, system-ui, -apple-system, sans-serif;
+	--font-mono: 'IBM Plex Mono', 'SF Mono', Monaco, monospace;
+	--theme-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   ORGANIC FLOW
+   ============================================ */
+.theme-organic-flow {
+	--color-background: oklch(98% 0.02 150);
+	--color-foreground: oklch(22% 0.02 150);
+	--color-muted: oklch(95% 0.02 150);
+	--color-muted-foreground: oklch(38% 0.02 150);
+	--color-border: oklch(90% 0.02 150);
+	--color-primary: oklch(68% 0.16 150);
+	--color-primary-foreground: oklch(12% 0.02 150);
+	--color-secondary: oklch(72% 0.14 200);
+	--color-secondary-foreground: oklch(12% 0.02 200);
+	--color-accent: oklch(78% 0.14 100);
+	--color-accent-foreground: oklch(20% 0.03 100);
+	--radius-sm: 1rem;
+	--radius-md: 1rem;
+	--radius-lg: 1.5rem;
+	--font-display: Comfortaa, Quicksand, 'Helvetica Neue', sans-serif;
+	--font-body: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+	--font-mono: 'Source Code Pro', 'SF Mono', Monaco, monospace;
+	--theme-shadow: 0 4px 20px rgba(34, 197, 94, 0.2);
+	--theme-glow: 0 0 30px rgba(34, 197, 94, 0.3);
+}
+
+/* ============================================
+   PIXEL ART
+   ============================================ */
+.theme-pixel-art {
+	--color-background: oklch(98% 0.02 250);
+	--color-foreground: oklch(18% 0.02 250);
+	--color-muted: oklch(94% 0.02 250);
+	--color-muted-foreground: oklch(30% 0.02 250);
+	--color-border: oklch(90% 0.02 250);
+	--color-primary: oklch(68% 0.28 30);
+	--color-primary-foreground: oklch(98% 0.01 30);
+	--color-secondary: oklch(68% 0.28 220);
+	--color-secondary-foreground: oklch(98% 0.01 220);
+	--color-accent: oklch(72% 0.28 140);
+	--color-accent-foreground: oklch(12% 0.02 140);
+	--radius-sm: 0rem;
+	--radius-md: 0rem;
+	--radius-lg: 0rem;
+	--font-display: 'Press Start 2P', 'Courier New', monospace;
+	--font-body: VT323, 'MS Gothic', Terminal, monospace;
+	--font-mono: VT323, Terminal, Monaco, monospace;
+	--theme-shadow: 4px 4px 0 0 currentColor;
+	--theme-border-width: 4px;
+}
+
+/* ============================================
+   RETRO FUTURISM
+   ============================================ */
+.theme-retro-futurism {
+	--color-background: oklch(14% 0.04 300);
+	--color-foreground: oklch(95% 0.02 300);
+	--color-muted: oklch(18% 0.04 300);
+	--color-muted-foreground: oklch(70% 0.02 300);
+	--color-border: oklch(24% 0.04 300);
+	--color-primary: oklch(65% 0.3 320);
+	--color-primary-foreground: oklch(98% 0.01 320);
+	--color-secondary: oklch(70% 0.28 260);
+	--color-secondary-foreground: oklch(98% 0.01 260);
+	--color-accent: oklch(72% 0.28 190);
+	--color-accent-foreground: oklch(10% 0.02 190);
+	--radius-sm: 0.25rem;
+	--radius-md: 0.25rem;
+	--radius-lg: 0.5rem;
+	--font-display: Orbitron, 'SF Mono', Monaco, monospace;
+	--font-body: 'Share Tech Mono', 'SF Mono', Monaco, monospace;
+	--font-mono: 'Source Code Pro', 'SF Mono', Monaco, monospace;
+	--theme-shadow: 0 0 30px rgba(255, 0, 128, 0.3);
+	--theme-glow: 0 0 30px #ff0080;
+}
+
+/* ============================================
+   TYPOGRAPHIC
+   ============================================ */
+.theme-typographic {
+	--color-background: oklch(99% 0.01 240);
+	--color-foreground: oklch(17% 0.02 240);
+	--color-muted: oklch(96% 0.01 240);
+	--color-muted-foreground: oklch(30% 0.02 240);
+	--color-border: oklch(92% 0.01 240);
+	--color-primary: oklch(48% 0.06 260);
+	--color-primary-foreground: oklch(96% 0.01 260);
+	--color-secondary: oklch(58% 0.08 25);
+	--color-secondary-foreground: oklch(98% 0.01 25);
+	--color-accent: oklch(66% 0.1 150);
+	--color-accent-foreground: oklch(14% 0.02 150);
+	--radius-sm: 0.25rem;
+	--radius-md: 0.25rem;
+	--radius-lg: 0.5rem;
+	--font-display: Inter, 'Helvetica Neue', Arial, sans-serif;
+	--font-body: Inter, 'Helvetica Neue', Arial, sans-serif;
+	--font-mono: 'JetBrains Mono', 'SF Mono', Monaco, monospace;
+	--theme-shadow: none;
+}
+
+/* ============================================
+   WIREFRAME
+   ============================================ */
+.theme-wireframe {
+	--color-background: oklch(99% 0.01 240);
+	--color-foreground: oklch(20% 0.02 240);
+	--color-muted: oklch(96% 0.01 240);
+	--color-muted-foreground: oklch(35% 0.02 240);
+	--color-border: oklch(92% 0.01 240);
+	--color-primary: oklch(55% 0.14 260);
+	--color-primary-foreground: oklch(98% 0.01 260);
+	--color-secondary: oklch(65% 0.14 210);
+	--color-secondary-foreground: oklch(98% 0.01 210);
+	--color-accent: oklch(70% 0.14 180);
+	--color-accent-foreground: oklch(14% 0.02 180);
+	--radius-sm: 0.25rem;
+	--radius-md: 0.25rem;
+	--radius-lg: 0.25rem;
+	--font-display: 'Fira Code', 'SF Mono', Monaco, monospace;
+	--font-body: 'IBM Plex Mono', 'SF Mono', Monaco, monospace;
+	--font-mono: 'SF Mono', Monaco, Consolas, monospace;
+	--theme-shadow: none;
+	--theme-border-style: dashed;
+}
+
+/* ============================================
+   THEME BUTTON STYLES
+   ============================================ */
+
+/* Cyberpunk - neon glow, sharp edges */
+.theme-cyberpunk .btn-primary {
+	background-color: var(--color-primary);
+	color: var(--color-primary-foreground);
+	border: 1px solid var(--color-primary);
+	border-radius: var(--radius-sm);
+	box-shadow:
+		0 0 20px var(--color-primary),
+		inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+.theme-cyberpunk .btn-primary:hover {
+	box-shadow:
+		0 0 30px var(--color-primary),
+		0 0 60px var(--color-primary);
+}
+.theme-cyberpunk .btn-secondary {
+	background-color: transparent;
+	color: var(--color-foreground);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-sm);
+}
+.theme-cyberpunk .btn-secondary:hover {
+	border-color: var(--color-primary);
+	box-shadow: 0 0 15px var(--color-primary);
+}
+
+/* Glassmorphic - frosted glass, blur */
+.theme-glassmorphic .btn-primary {
+	background-color: var(--color-primary);
+	color: var(--color-primary-foreground);
+	border: none;
+	border-radius: var(--radius-md);
+	box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+}
+.theme-glassmorphic .btn-primary:hover {
+	box-shadow: 0 8px 32px rgba(31, 38, 135, 0.35);
+}
+.theme-glassmorphic .btn-secondary {
+	background: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(12px);
+	color: var(--color-foreground);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: var(--radius-md);
+}
+.theme-glassmorphic .btn-secondary:hover {
+	background: rgba(255, 255, 255, 0.25);
+}
+
+/* Neumorphic - soft shadows, puffy */
+.theme-neumorphic .btn-primary {
+	background-color: var(--color-primary);
+	color: var(--color-primary-foreground);
+	border: none;
+	border-radius: var(--radius-md);
+	box-shadow:
+		5px 5px 10px rgba(0, 0, 0, 0.1),
+		-5px -5px 10px rgba(255, 255, 255, 0.8);
+}
+.theme-neumorphic .btn-primary:hover {
+	box-shadow:
+		3px 3px 6px rgba(0, 0, 0, 0.1),
+		-3px -3px 6px rgba(255, 255, 255, 0.8);
+}
+.theme-neumorphic .btn-primary:active {
+	box-shadow:
+		inset 3px 3px 6px rgba(0, 0, 0, 0.1),
+		inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+}
+.theme-neumorphic .btn-secondary {
+	background-color: var(--color-background);
+	color: var(--color-foreground);
+	border: none;
+	border-radius: var(--radius-md);
+	box-shadow:
+		5px 5px 10px rgba(0, 0, 0, 0.1),
+		-5px -5px 10px rgba(255, 255, 255, 0.8);
+}
+.theme-neumorphic .btn-secondary:hover {
+	box-shadow:
+		3px 3px 6px rgba(0, 0, 0, 0.1),
+		-3px -3px 6px rgba(255, 255, 255, 0.8);
+}
+
+/* Neu-Brutalist - thick borders, hard shadows, no radius */
+.theme-neu-brutalist .btn-primary {
+	background-color: var(--color-primary);
+	color: var(--color-primary-foreground);
+	border: 4px solid var(--color-foreground);
+	border-radius: 0;
+	box-shadow: 4px 4px 0 0 var(--color-foreground);
+}
+.theme-neu-brutalist .btn-primary:hover {
+	transform: translate(2px, 2px);
+	box-shadow: 2px 2px 0 0 var(--color-foreground);
+}
+.theme-neu-brutalist .btn-secondary {
+	background-color: var(--color-background);
+	color: var(--color-foreground);
+	border: 4px solid var(--color-foreground);
+	border-radius: 0;
+	box-shadow: 4px 4px 0 0 var(--color-foreground);
+}
+.theme-neu-brutalist .btn-secondary:hover {
+	transform: translate(2px, 2px);
+	box-shadow: 2px 2px 0 0 var(--color-foreground);
+}
+
+/* Claymorphic - soft, puffy, pastel shadows */
+.theme-claymorphic .btn-primary {
+	background-color: var(--color-primary);
+	color: var(--color-primary-foreground);
+	border: none;
+	border-radius: 22px;
+	box-shadow:
+		0 4px 8px rgba(0, 0, 0, 0.1),
+		0 2px 4px rgba(0, 0, 0, 0.06);
+}
+.theme-claymorphic .btn-primary:hover {
+	transform: translateY(-2px) scale(1.02);
+	box-shadow:
+		0 8px 16px rgba(0, 0, 0, 0.12),
+		0 4px 8px rgba(0, 0, 0, 0.08);
+}
+.theme-claymorphic .btn-secondary {
+	background-color: var(--color-muted);
+	color: var(--color-foreground);
+	border: none;
+	border-radius: 22px;
+	box-shadow:
+		0 4px 8px rgba(0, 0, 0, 0.1),
+		0 2px 4px rgba(0, 0, 0, 0.06);
+}
+.theme-claymorphic .btn-secondary:hover {
+	transform: translateY(-2px) scale(1.02);
+}
+
+/* Editorial - minimal, understated, typography-focused */
+.theme-editorial .btn-primary {
+	background-color: var(--color-foreground);
+	color: var(--color-background);
+	border: none;
+	border-radius: var(--radius-sm);
+}
+.theme-editorial .btn-primary:hover {
+	opacity: 0.9;
+}
+.theme-editorial .btn-secondary {
+	background-color: transparent;
+	color: var(--color-foreground);
+	border: 1px solid var(--color-foreground);
+	border-radius: var(--radius-sm);
+}
+.theme-editorial .btn-secondary:hover {
+	background-color: var(--color-foreground);
+	color: var(--color-background);
+}
+
+/* Flat - clean, bright colors, minimal shadows */
+.theme-flat .btn-primary {
+	background-color: var(--color-primary);
+	color: var(--color-primary-foreground);
+	border: none;
+	border-radius: var(--radius-sm);
+}
+.theme-flat .btn-primary:hover {
+	filter: brightness(1.1);
+}
+.theme-flat .btn-secondary {
+	background-color: var(--color-muted);
+	color: var(--color-foreground);
+	border: none;
+	border-radius: var(--radius-sm);
+}
+.theme-flat .btn-secondary:hover {
+	background-color: var(--color-border);
+}
+
+/* Industrial - utilitarian, bold, high contrast */
+.theme-industrial .btn-primary {
+	background-color: var(--color-primary);
+	color: var(--color-primary-foreground);
+	border: 2px solid var(--color-foreground);
+	border-radius: var(--radius-sm);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.theme-industrial .btn-primary:hover {
+	transform: scale(0.98);
+}
+.theme-industrial .btn-secondary {
+	background-color: var(--color-secondary);
+	color: var(--color-secondary-foreground);
+	border: 2px solid var(--color-foreground);
+	border-radius: var(--radius-sm);
+}
+.theme-industrial .btn-secondary:hover {
+	transform: scale(0.98);
+}
+
+/* Japanese Minimalist - subtle, balanced, minimal */
+.theme-japanese-minimalist .btn-primary {
+	background-color: var(--color-foreground);
+	color: var(--color-background);
+	border: none;
+	border-radius: var(--radius-sm);
+}
+.theme-japanese-minimalist .btn-primary:hover {
+	opacity: 0.85;
+}
+.theme-japanese-minimalist .btn-secondary {
+	background-color: transparent;
+	color: var(--color-foreground);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-sm);
+}
+.theme-japanese-minimalist .btn-secondary:hover {
+	border-color: var(--color-foreground);
+}
+
+/* Monochrome - black/white, inversion on hover */
+.theme-monochrome .btn-primary {
+	background-color: var(--color-foreground);
+	color: var(--color-background);
+	border: none;
+	border-radius: var(--radius-sm);
+}
+.theme-monochrome .btn-primary:hover {
+	opacity: 0.9;
+}
+.theme-monochrome .btn-secondary {
+	background-color: transparent;
+	color: var(--color-foreground);
+	border: 2px solid var(--color-foreground);
+	border-radius: var(--radius-sm);
+}
+.theme-monochrome .btn-secondary:hover {
+	background-color: var(--color-foreground);
+	color: var(--color-background);
+}
+
+/* Organic Flow - rounded, natural, green shadows */
+.theme-organic-flow .btn-primary {
+	background-color: var(--color-primary);
+	color: var(--color-primary-foreground);
+	border: none;
+	border-radius: 9999px;
+	box-shadow: 0 8px 30px rgba(34, 197, 94, 0.3);
+}
+.theme-organic-flow .btn-primary:hover {
+	transform: scale(1.03);
+	box-shadow: 0 12px 40px rgba(34, 197, 94, 0.4);
+}
+.theme-organic-flow .btn-secondary {
+	background-color: var(--color-muted);
+	color: var(--color-foreground);
+	border: none;
+	border-radius: 9999px;
+}
+.theme-organic-flow .btn-secondary:hover {
+	transform: scale(1.03);
+}
+
+/* Pixel Art - blocky, hard edges, retro shadows */
+.theme-pixel-art .btn-primary {
+	background-color: var(--color-primary);
+	color: var(--color-primary-foreground);
+	border: 4px solid var(--color-foreground);
+	border-radius: 0;
+	box-shadow: 4px 4px 0 0 var(--color-foreground);
+	image-rendering: pixelated;
+}
+.theme-pixel-art .btn-primary:hover {
+	transform: translate(2px, 2px);
+	box-shadow: 2px 2px 0 0 var(--color-foreground);
+}
+.theme-pixel-art .btn-secondary {
+	background-color: var(--color-muted);
+	color: var(--color-foreground);
+	border: 4px solid var(--color-foreground);
+	border-radius: 0;
+}
+.theme-pixel-art .btn-secondary:hover {
+	background-color: var(--color-background);
+}
+
+/* Retro Futurism - neon glow, synthwave */
+.theme-retro-futurism .btn-primary {
+	background-color: var(--color-primary);
+	color: var(--color-primary-foreground);
+	border: 1px solid var(--color-primary);
+	border-radius: var(--radius-sm);
+	box-shadow: 0 0 30px var(--color-primary);
+}
+.theme-retro-futurism .btn-primary:hover {
+	box-shadow:
+		0 0 40px var(--color-primary),
+		0 0 80px var(--color-primary);
+}
+.theme-retro-futurism .btn-secondary {
+	background-color: transparent;
+	color: var(--color-foreground);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-sm);
+}
+.theme-retro-futurism .btn-secondary:hover {
+	border-color: var(--color-secondary);
+	box-shadow: 0 0 20px var(--color-secondary);
+}
+
+/* Typographic - text-focused, minimal decoration */
+.theme-typographic .btn-primary {
+	background-color: var(--color-foreground);
+	color: var(--color-background);
+	border: none;
+	border-radius: var(--radius-sm);
+}
+.theme-typographic .btn-primary:hover {
+	opacity: 0.9;
+}
+.theme-typographic .btn-secondary {
+	background-color: transparent;
+	color: var(--color-foreground);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-sm);
+}
+.theme-typographic .btn-secondary:hover {
+	border-color: var(--color-foreground);
+}
+
+/* Wireframe - skeletal, dashed borders */
+.theme-wireframe .btn-primary {
+	background-color: transparent;
+	color: var(--color-foreground);
+	border: 2px solid var(--color-foreground);
+	border-radius: var(--radius-sm);
+}
+.theme-wireframe .btn-primary:hover {
+	background-color: var(--color-foreground);
+	color: var(--color-background);
+}
+.theme-wireframe .btn-secondary {
+	background-color: transparent;
+	color: var(--color-foreground);
+	border: 2px dashed var(--color-border);
+	border-radius: var(--radius-sm);
+}
+.theme-wireframe .btn-secondary:hover {
+	border-style: solid;
+	border-color: var(--color-foreground);
+}
+
+/* ============================================
+   KEYFRAME ANIMATIONS
+   ============================================ */
+
+/* Cyberpunk */
+@keyframes neon-pulse {
+	0% {
+		opacity: 1;
+		filter: brightness(1);
+	}
+	100% {
+		opacity: 0.8;
+		filter: brightness(1.2);
+	}
+}
+
+@keyframes cyber-glitch {
+	0%,
+	100% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translate(-2px, 2px);
+	}
+	40% {
+		transform: translate(2px, -2px);
+	}
+	60% {
+		transform: translate(-1px, -1px);
+	}
+	80% {
+		transform: translate(1px, 1px);
+	}
+}
+
+/* Glassmorphic */
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+@keyframes shimmer {
+	0% {
+		background-position: -200% 0;
+	}
+	100% {
+		background-position: 200% 0;
+	}
+}
+
+/* Neumorphic */
+@keyframes soft-press {
+	0% {
+		box-shadow:
+			8px 8px 16px rgba(0, 0, 0, 0.1),
+			-8px -8px 16px rgba(255, 255, 255, 0.8);
+	}
+	100% {
+		box-shadow:
+			inset 4px 4px 8px rgba(0, 0, 0, 0.1),
+			inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+	}
+}
+
+/* Neu-Brutalist */
+@keyframes brutal-bounce {
+	0% {
+		transform: scale(0.9) rotate(-2deg);
+	}
+	50% {
+		transform: scale(1.05) rotate(1deg);
+	}
+	100% {
+		transform: scale(1) rotate(0);
+	}
+}
+
+/* Claymorphic */
+@keyframes puffy-hover {
+	0% {
+		transform: translateY(0) scale(1);
+	}
+	100% {
+		transform: translateY(-2px) scale(1.02);
+	}
+}
+
+@keyframes gentle-bob {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-4px);
+	}
+}
+
+/* Organic Flow */
+@keyframes grow {
+	0% {
+		transform: scale(0.9);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes bloom {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+/* Pixel Art */
+@keyframes pixel-bounce {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	25% {
+		transform: translateY(-4px);
+	}
+	50% {
+		transform: translateY(0);
+	}
+	75% {
+		transform: translateY(-2px);
+	}
+}
+
+@keyframes 8bit-flash {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+}
+
+/* Retro Futurism */
+@keyframes neon-flicker {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.8;
+	}
+	52% {
+		opacity: 1;
+	}
+	54% {
+		opacity: 0.9;
+	}
+}
+
+@keyframes vhs-glitch {
+	0%,
+	100% {
+		transform: translate(0);
+		filter: none;
+	}
+	20% {
+		transform: translate(-2px, 1px);
+		filter: hue-rotate(90deg);
+	}
+	40% {
+		transform: translate(2px, -1px);
+	}
+	60% {
+		transform: translate(-1px, 2px);
+		filter: hue-rotate(-90deg);
+	}
+}
+
+/* General */
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes text-reveal {
+	0% {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* ============================================
+   TRANSITIONS
+   ============================================ */
+[class^='theme-'],
+[class*=' theme-'] {
+	transition:
+		--color-background 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+		--color-foreground 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+		--color-muted 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+		--color-muted-foreground 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+		--color-border 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+		--color-primary 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+		--color-primary-foreground 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+		background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+		color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+		border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+		box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+		border-radius 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Smooth transition for all nested elements */
+[class^='theme-'] *,
+[class*=' theme-'] * {
+	transition:
+		background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+		color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+		border-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+		box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+		border-radius 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}

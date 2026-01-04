@@ -29,6 +29,9 @@ importers:
       '@fontsource/exo-2':
         specifier: ^5.2.8
         version: 5.2.8
+      '@fontsource/fira-code':
+        specifier: ^5.2.7
+        version: 5.2.7
       '@fontsource/ibm-plex-mono':
         specifier: ^5.2.7
         version: 5.2.7
@@ -388,6 +391,9 @@ packages:
 
   '@fontsource/exo-2@5.2.8':
     resolution: {integrity: sha512-cOZuiqW+gKg2SJAjymCicup0A8qto4M/lpyGahal3twMeLCRma8x/okFCdLYlTvYeQesF7d3WLKi+N04iPb40A==}
+
+  '@fontsource/fira-code@5.2.7':
+    resolution: {integrity: sha512-tnB9NNund9TwIym8/7DMJe573nlPEQb+fKUV5GL8TBYXjIhDvL0D7mgmNVNQUPhXp+R7RylQeiBdkA4EbOHPGQ==}
 
   '@fontsource/ibm-plex-mono@5.2.7':
     resolution: {integrity: sha512-MKAb8qV+CaiMQn2B0dIi1OV3565NYzp3WN5b4oT6LTkk+F0jR6j0ZN+5BKJiIhffDC3rtBULsYZE65+0018z9w==}
@@ -1859,6 +1865,8 @@ snapshots:
   '@fontsource/comfortaa@5.2.8': {}
 
   '@fontsource/exo-2@5.2.8': {}
+
+  '@fontsource/fira-code@5.2.7': {}
 
   '@fontsource/ibm-plex-mono@5.2.7': {}
 
