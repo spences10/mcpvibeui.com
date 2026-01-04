@@ -60,9 +60,10 @@
 	});
 
 	const seo_config: SeoConfig = {
-		title: 'mcp-vibe-ui — Design Tokens for AI-Generated Interfaces',
+		title:
+			'mcp-vibe-ui — Design Tokens for AI-Generated UI | MCP Server',
 		description:
-			'An MCP server that provides complete design systems to LLMs. 15 production themes with Tailwind v4 CSS, component patterns, typography, and effects.',
+			'Stop getting ugly AI-generated interfaces. mcp-vibe-ui is an MCP server that gives Claude, ChatGPT, and other LLMs access to complete design systems with Tailwind v4 CSS.',
 		url: 'https://mcpvibeui.com',
 	};
 
@@ -137,48 +138,83 @@
 						class="mb-4 text-sm font-medium tracking-widest uppercase"
 						style="color: var(--color-primary);"
 					>
-						MCP Server for Design Systems
+						MCP Server
 					</p>
 					<h1
-						class="mb-6 text-5xl leading-[1.1] tracking-tight md:text-6xl lg:text-7xl"
+						class="mb-6 text-4xl leading-[1.1] tracking-tight md:text-5xl lg:text-6xl"
 						style="font-family: var(--font-display); font-weight: 600;"
 					>
-						One prompt.<br />
-						<span style="color: var(--color-primary);">
-							15 themes.
-						</span>
+						AI-generated UI that doesn't look like trash
 					</h1>
 					<p
 						class="mb-8 max-w-lg text-lg leading-relaxed"
 						style="color: var(--color-muted-foreground);"
 					>
-						Give your LLM access to complete design systems. Tailwind
-						v4 tokens, component patterns, typography, and effects —
-						all from a single tool call.
+						<strong style="color: var(--color-foreground);"
+							>mcp-vibe-ui</strong
+						>
+						is an
+						<a
+							href="https://modelcontextprotocol.io"
+							target="_blank"
+							rel="noopener"
+							class="underline underline-offset-2"
+							style="color: var(--color-foreground);">MCP server</a
+						>
+						that gives LLMs access to complete design systems. When Claude
+						or Cursor generates UI, it pulls real Tailwind v4 tokens, component
+						patterns, and effects instead of guessing.
 					</p>
+
+					<!-- Quick install -->
+					<div
+						class="mb-6 overflow-hidden"
+						style="border: 1px solid var(--color-border); border-radius: var(--radius-md); background-color: var(--color-muted);"
+					>
+						<div
+							class="px-3 py-1.5 text-xs"
+							style="border-bottom: 1px solid var(--color-border); color: var(--color-muted-foreground);"
+						>
+							Add to Claude Desktop / Cursor
+						</div>
+						<pre
+							class="overflow-x-auto p-3 text-sm"
+							style="font-family: var(--font-mono);"><code
+								>{`"mcp-vibe-ui": { "command": "npx", "args": ["-y", "mcp-vibe-ui"] }`}</code
+							></pre>
+					</div>
 
 					<div class="flex flex-wrap gap-3">
 						<a
-							href="#themes"
+							href="#how-it-works"
 							class="px-6 py-3 text-sm font-semibold transition hover:opacity-90"
 							style="background-color: var(--color-foreground); color: var(--color-background); border-radius: var(--radius-sm);"
 						>
-							View all themes
+							See how it works
 						</a>
 						<a
-							href="https://github.com/spences10/mcp-vibe-ui#readme"
+							href="https://github.com/spences10/mcp-vibe-ui"
 							target="_blank"
 							rel="noopener"
 							class="px-6 py-3 text-sm font-semibold transition hover:opacity-80"
 							style="border: 1px solid var(--color-border); border-radius: var(--radius-sm);"
 						>
-							Documentation
+							GitHub
 						</a>
 					</div>
 				</div>
 
 				<!-- Right: Live Preview -->
 				<div class="relative">
+					<!-- Proof label -->
+					<div
+						class="mb-3 text-center text-sm font-medium"
+						style="color: var(--color-muted-foreground);"
+					>
+						Every page below was AI-generated. Same prompt. Different
+						theme.
+					</div>
+
 					<div
 						class="relative overflow-hidden"
 						style="border-radius: var(--radius-lg); border: 1px solid var(--color-border); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);"
@@ -257,14 +293,21 @@
 						class="mt-4 rounded p-4"
 						style="background-color: var(--color-muted); border: 1px solid var(--color-border); border-radius: var(--radius-lg);"
 					>
+						<div class="flex items-center justify-between">
+							<p
+								class="text-xs tracking-wider uppercase"
+								style="color: var(--color-muted-foreground);"
+							>
+								The exact prompt used
+							</p>
+							<span
+								class="rounded px-2 py-0.5 text-xs"
+								style="background-color: var(--color-primary); color: var(--color-primary-foreground);"
+								>one-shot</span
+							>
+						</div>
 						<p
-							class="text-xs tracking-wider uppercase"
-							style="color: var(--color-muted-foreground); margin-bottom: 0.5rem;"
-						>
-							Prompt used
-						</p>
-						<p
-							class="text-sm"
+							class="mt-2 text-sm"
 							style="font-family: var(--font-mono); color: var(--color-foreground);"
 						>
 							create a <span style="color: var(--color-primary);"
@@ -272,146 +315,43 @@
 							> landing page for a cat dating app
 						</p>
 					</div>
-
-					<p
-						class="mt-6 text-base leading-relaxed"
-						style="color: var(--color-muted-foreground);"
-					>
-						Every theme on this site was generated with that <span
-							style="color: var(--color-primary);">exact prompt</span
-						>. One-shot. No follow-ups. Each was a fresh Claude Code
-						session — the only thing that changed was the theme name.
-					</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- How it works -->
-	<section
-		class="px-6 py-20"
-		style="background-color: var(--color-muted);"
-	>
-		<div class="mx-auto max-w-7xl">
-			<h2
-				class="mb-12 text-center text-3xl tracking-tight md:text-4xl"
-				style="font-family: var(--font-display); font-weight: 600;"
+	<!-- Proof section -->
+	<section class="px-6 py-16">
+		<div class="mx-auto max-w-3xl text-center">
+			<p
+				class="text-xl leading-relaxed md:text-2xl"
+				style="color: var(--color-foreground);"
 			>
-				How it works
-			</h2>
-			<div class="grid gap-8 md:grid-cols-3">
-				<div class="text-center">
-					<div
-						class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full text-lg font-semibold"
-						style="background-color: var(--color-foreground); color: var(--color-background);"
-					>
-						1
-					</div>
-					<h3
-						class="mb-2 text-lg font-semibold"
-						style="font-family: var(--font-display);"
-					>
-						Add to MCP config
-					</h3>
-					<p
-						class="text-sm leading-relaxed"
-						style="color: var(--color-muted-foreground);"
-					>
-						One line in your Claude Desktop or agent config. No
-						dependencies to install.
-					</p>
-				</div>
-				<div class="text-center">
-					<div
-						class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full text-lg font-semibold"
-						style="background-color: var(--color-foreground); color: var(--color-background);"
-					>
-						2
-					</div>
-					<h3
-						class="mb-2 text-lg font-semibold"
-						style="font-family: var(--font-display);"
-					>
-						Ask for a theme
-					</h3>
-					<p
-						class="text-sm leading-relaxed"
-						style="color: var(--color-muted-foreground);"
-					>
-						The LLM calls theme_search with a name or description.
-						Gets back complete design tokens.
-					</p>
-				</div>
-				<div class="text-center">
-					<div
-						class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full text-lg font-semibold"
-						style="background-color: var(--color-foreground); color: var(--color-background);"
-					>
-						3
-					</div>
-					<h3
-						class="mb-2 text-lg font-semibold"
-						style="font-family: var(--font-display);"
-					>
-						Generate styled UI
-					</h3>
-					<p
-						class="text-sm leading-relaxed"
-						style="color: var(--color-muted-foreground);"
-					>
-						LLM uses the tokens to generate consistent, beautiful
-						interfaces every time.
-					</p>
-				</div>
-			</div>
-
-			<!-- Config example -->
-			<div
-				class="mx-auto mt-12 max-w-2xl overflow-hidden"
-				style="border: 1px solid var(--color-border); border-radius: var(--radius-lg); background-color: var(--color-background);"
-			>
-				<div
-					class="px-4 py-2"
-					style="border-bottom: 1px solid var(--color-border);"
-				>
-					<span
-						class="text-xs"
-						style="font-family: var(--font-mono); color: var(--color-muted-foreground);"
-						>claude_desktop_config.json</span
-					>
-				</div>
-				<pre
-					class="overflow-x-auto p-4 text-sm"
-					style="font-family: var(--font-mono);"><code
-						>{`{
-  "mcpServers": {
-    "mcp-vibe-ui": {
-      "command": "npx",
-      "args": ["-y", "mcp-vibe-ui"]
-    }
-  }
-}`}</code
-					></pre>
-			</div>
+				Every theme on this site was generated with the
+				<strong style="color: var(--color-primary);"
+					>exact same prompt</strong
+				>. One-shot. No follow-ups. Each was a fresh Claude Code
+				session — the only thing that changed was the theme name.
+			</p>
 		</div>
 	</section>
 
 	<!-- Theme Gallery -->
-	<section id="themes" class="px-6 py-20">
+	<section id="themes" class="px-6 pb-20">
 		<div class="mx-auto max-w-7xl">
 			<div class="mb-12 text-center">
 				<h2
 					class="mb-4 text-3xl tracking-tight md:text-4xl"
 					style="font-family: var(--font-display); font-weight: 600;"
 				>
-					15 distinct themes
+					15 themes, zero follow-up prompts
 				</h2>
 				<p
 					class="mx-auto max-w-2xl leading-relaxed"
 					style="color: var(--color-muted-foreground);"
 				>
-					Each generated with the same prompt. Click any theme to see
-					the full page.
+					Each page below was generated in a fresh Claude Code session
+					with the same prompt. Click to see the full result.
 				</p>
 			</div>
 
@@ -443,6 +383,208 @@
 						</div>
 					</a>
 				{/each}
+			</div>
+		</div>
+	</section>
+
+	<!-- How it works -->
+	<section
+		id="how-it-works"
+		class="px-6 py-20"
+		style="background-color: var(--color-muted);"
+	>
+		<div class="mx-auto max-w-7xl">
+			<div class="mb-12 text-center">
+				<h2
+					class="mb-4 text-3xl tracking-tight md:text-4xl"
+					style="font-family: var(--font-display); font-weight: 600;"
+				>
+					How it works
+				</h2>
+				<p
+					class="mx-auto max-w-2xl"
+					style="color: var(--color-muted-foreground);"
+				>
+					MCP (Model Context Protocol) lets LLMs call external tools.
+					When you ask for themed UI, the LLM calls
+					<code
+						style="font-family: var(--font-mono); background-color: var(--color-background); padding: 0.125rem 0.375rem; border-radius: 0.25rem;"
+						>theme_search</code
+					> and gets back everything it needs.
+				</p>
+			</div>
+
+			<!-- Two column: steps + code -->
+			<div class="grid gap-8 lg:grid-cols-2">
+				<!-- Steps -->
+				<div class="space-y-6">
+					<div
+						class="flex gap-4 rounded-lg p-4"
+						style="background-color: var(--color-background); border: 1px solid var(--color-border);"
+					>
+						<div
+							class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-semibold"
+							style="background-color: var(--color-foreground); color: var(--color-background);"
+						>
+							1
+						</div>
+						<div>
+							<h3
+								class="mb-1 font-semibold"
+								style="font-family: var(--font-display);"
+							>
+								You prompt for themed UI
+							</h3>
+							<p
+								class="text-sm"
+								style="color: var(--color-muted-foreground);"
+							>
+								"Create a cyberpunk login form" or "build me a
+								glassmorphic dashboard"
+							</p>
+						</div>
+					</div>
+
+					<div
+						class="flex gap-4 rounded-lg p-4"
+						style="background-color: var(--color-background); border: 1px solid var(--color-border);"
+					>
+						<div
+							class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-semibold"
+							style="background-color: var(--color-foreground); color: var(--color-background);"
+						>
+							2
+						</div>
+						<div>
+							<h3
+								class="mb-1 font-semibold"
+								style="font-family: var(--font-display);"
+							>
+								LLM calls theme_search
+							</h3>
+							<p
+								class="text-sm"
+								style="color: var(--color-muted-foreground);"
+							>
+								Matches by name ("cyberpunk") or intent ("dark
+								futuristic neon"). Returns the full design system.
+							</p>
+						</div>
+					</div>
+
+					<div
+						class="flex gap-4 rounded-lg p-4"
+						style="background-color: var(--color-background); border: 1px solid var(--color-border);"
+					>
+						<div
+							class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-semibold"
+							style="background-color: var(--color-foreground); color: var(--color-background);"
+						>
+							3
+						</div>
+						<div>
+							<h3
+								class="mb-1 font-semibold"
+								style="font-family: var(--font-display);"
+							>
+								LLM generates with real tokens
+							</h3>
+							<p
+								class="text-sm"
+								style="color: var(--color-muted-foreground);"
+							>
+								Uses the CSS variables, patterns, and effects. No more
+								guessing colors or inventing class names.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Code example -->
+				<div
+					class="overflow-hidden"
+					style="border: 1px solid var(--color-border); border-radius: var(--radius-lg); background-color: var(--color-background);"
+				>
+					<div
+						class="px-4 py-2"
+						style="border-bottom: 1px solid var(--color-border);"
+					>
+						<span
+							class="text-xs"
+							style="font-family: var(--font-mono); color: var(--color-muted-foreground);"
+							>theme_search("cyberpunk") returns:</span
+						>
+					</div>
+					<pre
+						class="overflow-x-auto p-4 text-xs leading-relaxed"
+						style="font-family: var(--font-mono);"><code
+							>{`{
+  "id": "cyberpunk",
+  "css": "@theme {
+    --color-background: oklch(12% 0.03 300);
+    --color-primary: oklch(65% 0.28 330);
+    --font-display: 'Orbitron', monospace;
+    ...
+  }",
+  "patterns": {
+    "surface": "bg-background text-foreground",
+    "card": "bg-muted rounded-lg border",
+    "glow": "shadow-[0_0_20px_var(--color-primary)]"
+  },
+  "fonts": [
+    { "package": "@fontsource/orbitron", ... }
+  ],
+  "extended": {
+    "effects": { "neonGlow": "..." },
+    "animations": { "pulse": "..." }
+  }
+}`}</code
+						></pre>
+				</div>
+			</div>
+
+			<!-- Installation -->
+			<div class="mt-12">
+				<h3
+					class="mb-4 text-center text-lg font-semibold"
+					style="font-family: var(--font-display);"
+				>
+					Installation
+				</h3>
+				<div
+					class="mx-auto max-w-2xl overflow-hidden"
+					style="border: 1px solid var(--color-border); border-radius: var(--radius-lg); background-color: var(--color-background);"
+				>
+					<div
+						class="px-4 py-2"
+						style="border-bottom: 1px solid var(--color-border);"
+					>
+						<span
+							class="text-xs"
+							style="font-family: var(--font-mono); color: var(--color-muted-foreground);"
+							>claude_desktop_config.json / .cursor/mcp.json</span
+						>
+					</div>
+					<pre
+						class="overflow-x-auto p-4 text-sm"
+						style="font-family: var(--font-mono);"><code
+							>{`{
+  "mcpServers": {
+    "mcp-vibe-ui": {
+      "command": "npx",
+      "args": ["-y", "mcp-vibe-ui"]
+    }
+  }
+}`}</code
+						></pre>
+				</div>
+				<p
+					class="mt-3 text-center text-sm"
+					style="color: var(--color-muted-foreground);"
+				>
+					That's it. No npm install. npx downloads and runs it on
+					demand.
+				</p>
 			</div>
 		</div>
 	</section>
