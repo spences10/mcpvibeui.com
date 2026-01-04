@@ -72,7 +72,7 @@
 		applicationCategory: 'DeveloperApplication',
 		operatingSystem: 'Any',
 		description:
-			'MCP server providing design tokens for LLM-powered UI generation with 15 production-ready themes',
+			'MCP server providing design tokens for LLM-powered UI generation with 15 distinct themes',
 		url: 'https://mcpvibeui.com',
 		author: { '@type': 'Person', name: 'Scott Spence' },
 		offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
@@ -404,7 +404,7 @@
 					class="mb-4 text-3xl tracking-tight md:text-4xl"
 					style="font-family: var(--font-display); font-weight: 600;"
 				>
-					15 production-ready themes
+					15 distinct themes
 				</h2>
 				<p
 					class="mx-auto max-w-2xl leading-relaxed"
