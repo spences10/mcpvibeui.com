@@ -43,6 +43,7 @@
 		"@fontsource/source-serif-pro": "^5.2.5",
 		"@fontsource/space-grotesk": "^5.2.10",
 		"@fontsource/space-mono": "^5.2.9",
+		"@fontsource/victor-mono": "^5.2.8",
 		"@fontsource/vt323": "^5.2.7",
 		"@playwright/test": "^1.57.0",
 		"@sveltejs/adapter-auto": "^7.0.0",
